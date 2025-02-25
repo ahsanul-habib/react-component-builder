@@ -25,7 +25,7 @@ export default function CopyButton() {
     try {
       await navigator.clipboard.writeText(textToCopy);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+      setTimeout(() => setCopied(false), 2000);
     } catch (error) {
       console.error("Failed to copy:", error);
     }
@@ -36,20 +36,8 @@ export default function CopyButton() {
       onClick={handleCopy}
       className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
     >
-      {copied ? "Copied!" : "Copy Text"}
+      {copied ? "Copied!" : "Copy Prompt"}
     </button>
   );
 }
 
-// const DeleteButton = () => {
-//   return (
-//     <a
-//       href="#"
-//       class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
-//     >
-//       Copy Prompt
-//     </a>
-//   );
-// };
-
-// export default DeleteButton;
