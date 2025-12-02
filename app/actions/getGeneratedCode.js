@@ -2,7 +2,7 @@
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const model = "gemini-1.5-flash";
+const model = "gemini-2.5-flash";
 
 const getGeneratedCode = async (messages) => {
   try {
